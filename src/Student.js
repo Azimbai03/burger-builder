@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function Student(props) {
     return (
         <div>
@@ -10,7 +9,5 @@ function Student(props) {
             </div>
     );
 };
-
-
 
 export default Student;

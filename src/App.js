@@ -1,8 +1,6 @@
 import React, { useState} from 'react';
 import './App.css';
 import Student from'./Student'; 
-
-
 function App() {
   const [students, setStudents] = useState([
     {name:"azimbai", age: 30 },
@@ -14,8 +12,7 @@ function App() {
 newStudent[0].name = "Joldosh";
 setStudents[0].name = [...students];
   };
-
-  return (
+return (
     <div className="App">
     <h1>Hello World</h1> 
     <button>Change my name</button>
