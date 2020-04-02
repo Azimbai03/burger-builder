@@ -1,12 +1,10 @@
-import React, { useState} from 'react';
-import './App.css';
+import React, { useState } from 'react';
+import InputExamples from './InputExamples';
 
-function App() {
- return (
+export default function() {
+  return (
     <div className="App">
-    burger-builder by Azimbai Kubanychbekov
+      <InputExamples />
     </div>
   );
-}
-
-export default App;
+};
