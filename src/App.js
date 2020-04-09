@@ -1,10 +1,14 @@
 import React from 'react';
+import './App.css';
+import Layout from './components/Layout/Layout';
+import SushiBuilder from './containers/SushiBuilder/SushiBuilder';
 
-
-export default function() {
+export default () => {
   return (
     <div className="App">
-      <h1>5</h1>
+      <Layout>
+        <SushiBuilder />
+      </Layout>
     </div>
   );
 };
