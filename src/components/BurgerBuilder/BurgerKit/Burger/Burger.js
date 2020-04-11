@@ -2,25 +2,25 @@ import React from 'react';
 import classes from './Burger.module.css';
 
 export default ({ type }) => {
-  const sushiClasses = [classes.Sushi];
+  const burgerClasses = [classes.burger];
 
   switch (type) {
-    case 'salmonRoll':
-      sushiClasses.push(classes.salmonRoll);
+    case 'colbasa':
+      burgerClasses.push(classes.colbasa);
       break;
 
-    case 'tunaRoll':
-      sushiClasses.push(classes.tunaRoll);
+    case 'tamato':
+      burgerClasses.push(classes.tamato);
       break;
 
-    case 'maki':
+    case 'ogures':
     default:
-      sushiClasses.push(classes.maki);
+      burgerClasses.push(classes.ogures);
       break;
   }
 
   return (
-    <div className={sushiClasses.join(' ')}>
+    <div className={burgerClasses.join(' ')}>
     </div>
   );
 };

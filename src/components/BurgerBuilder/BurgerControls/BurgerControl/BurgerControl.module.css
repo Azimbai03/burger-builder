@@ -1,0 +1,21 @@
+.BurgerControl {
+    display: flex;
+    align-items: center;
+  }
+ 
+  .BurgerControl button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: white;
+    color: #EC6F31;
+    font-weight: bold;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .BurgerControl button:disabled {
+    opacity: .5;
+  }
+  .BurgerControl button:not(:disabled):hover {
+    opacity: .8;
+  }
