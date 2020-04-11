@@ -9,7 +9,7 @@ const PRICES = {
 
 export default () => {
   const [ingredients, setIngredients] = useState({
-    avocadoMaki: 0,
+    colbasa: 5,
     avocadoTunaRoll: 0,
     californiaMaki: 0,
     californiaTunaRoll: 0,

@@ -1,14 +1,14 @@
 import React from "react";
 import classes from "./BurgerControls.module.css";
-import SushiControl from "./BurgerControl/BurgerControl";
+import BurgerControl from "./BurgerControl/BurgerControl";
 
 const CONTROLS = [
-  { label: "Avocado Maki", type: "avocadoMaki" },
-  { label: "Avocado Tuna Roll", type: "avocadoTunaRoll" },
-  { label: "California Maki", type: "californiaMaki" },
-  { label: "California Tuna Roll", type: "californiaTunaRoll" },
-  { label: "Ikura Maki", type: "ikuraMaki" },
-  { label: "Salmon Maki", type: "salmonMaki" },
+  { label: "colbasa", type: "avocadoMaki" },
+  { label: "Capusta", type: "avocadoTunaRoll" },
+  { label: "kotlety", type: "californiaMaki" },
+  { label: "ogures", type: "californiaTunaRoll" },
+  { label: "tamato", type: "ikuraMaki" },
+  { label: "ketchup", type: "salmonMaki" },
 ];
 
 export default ({ ingredients, addIngredient, removeIngredient }) => {
@@ -22,5 +22,5 @@ export default ({ ingredients, addIngredient, removeIngredient }) => {
     />
   ));
 
-  return <div className={classes.SushiControls}>{controlsOutput}</div>;
+  return <div className={classes.BurgerControls}>{controlsOutput}</div>;
 };

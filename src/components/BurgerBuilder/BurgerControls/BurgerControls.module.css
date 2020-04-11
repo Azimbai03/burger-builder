@@ -1,6 +1,6 @@
 .BurgerControls {
-    border: 3px solid #D35A25;
-    background-color: #EC6F31;
+    border: 3px solid rgb(81, 223, 52);
+    background-color: green;
     width: 300px;
     padding-top: .5rem;
     padding-left: .5rem;
