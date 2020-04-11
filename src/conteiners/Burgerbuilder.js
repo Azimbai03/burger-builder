@@ -39,7 +39,7 @@ export default () => {
   }
 
   return (
-    <div className={classes.SushiBuilder}>
+    <div className={classes.BurgerBuilder}>
       <BurgerKit price={price} ingredients={ingredients} />
       <BurgerControls
         ingredients={ingredients}
