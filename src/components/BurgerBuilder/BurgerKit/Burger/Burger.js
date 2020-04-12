@@ -21,7 +21,9 @@ case 'lettuce':
       burgerClasses.push(classes.lettuce);
         break;
 
- 
+        case 'ketchup':
+          burgerClasses.push(classes.ketchup);
+            break;
       }
 
   return (

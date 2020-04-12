@@ -12,8 +12,8 @@
     background-color: white;
   }
   .cucumber {
-    border-radius: 20%;
-    border: 1px solid white;
+    border-radius: 100%;
+    border: 15px solid yellow;
     background-color: green;
   }
   .tamato {
@@ -27,7 +27,7 @@
     background-color: white;
   }
   .ketchup {
-    border-radius: 20%;
+    border-radius: 100%;
     border: 15px solid red;
     background-color: white;
   }
