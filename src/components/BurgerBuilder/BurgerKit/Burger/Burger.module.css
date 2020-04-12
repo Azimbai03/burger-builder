@@ -31,3 +31,8 @@
     border: 15px solid red;
     background-color: white;
   }
+  .chees{
+    border-radius: 100%;
+    border: 15px solid yellow;
+    background-color: white;
+  }

@@ -14,6 +14,7 @@ export default () => {
     tamato: 0,
     lettuce: 0,
     chees: 0,
+    ketchup:0,
     
   });
   const [price, setPrice] = useState(100);

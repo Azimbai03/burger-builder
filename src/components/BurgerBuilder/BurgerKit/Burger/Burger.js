@@ -24,6 +24,10 @@ case 'lettuce':
         case 'ketchup':
           burgerClasses.push(classes.ketchup);
             break;
+            
+            case 'chees':
+              burgerClasses.push(classes.chees);
+                break;
       }
 
   return (
