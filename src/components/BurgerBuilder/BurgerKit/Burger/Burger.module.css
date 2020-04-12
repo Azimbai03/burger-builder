@@ -2,22 +2,32 @@
     width: 50px;
     height: 50px;
     box-sizing: border-box;
-  
+  border:5px solid grey;
     margin-right: .5rem;
     margin-bottom: .5rem;
   }
-  .calbasa {
+  .steak {
     border-radius: 100%;
     border: 15px solid rgb(230, 159, 29);
     background-color: white;
+  }
+  .cucumber {
+    border-radius: 20%;
+    border: 1px solid white;
+    background-color: green;
   }
   .tamato {
     border-radius: 20%;
     border: 15px solid tomato;
     background-color: white;
   }
-  .ogures {
-    border-radius: 100%;
-    border: 1px solid rgb(12, 50, 12);
+  .lettuce {
+    border-radius: 20%;
+    border: 15px solid greenyellow;
+    background-color: white;
+  }
+  .ketchup {
+    border-radius: 20%;
+    border: 15px solid red;
     background-color: white;
   }

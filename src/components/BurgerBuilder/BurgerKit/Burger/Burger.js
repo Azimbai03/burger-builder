@@ -5,19 +5,24 @@ export default ({ type }) => {
   const burgerClasses = [classes.burger];
 
   switch (type) {
-    case 'colbasa':
-      burgerClasses.push(classes.colbasa);
+    case 'steak':
+      burgerClasses.push(classes.steak);
       break;
 
-    case 'tamato':
+case 'cucumber':
+    burgerClasses.push(classes.cucumber);
+      break;
+
+ case 'tamato':
       burgerClasses.push(classes.tamato);
       break;
 
-    case 'ogures':
-    default:
-      burgerClasses.push(classes.ogures);
-      break;
-  }
+case 'lettuce':
+      burgerClasses.push(classes.lettuce);
+        break;
+
+ 
+      }
 
   return (
     <div className={burgerClasses.join(' ')}>

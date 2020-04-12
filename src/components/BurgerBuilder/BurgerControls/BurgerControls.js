@@ -3,12 +3,12 @@ import classes from "./BurgerControls.module.css";
 import BurgerControl from "./BurgerControl/BurgerControl";
 
 const CONTROLS = [
-  { label: "colbasa", type: "avocadoMaki" },
-  { label: "Capusta", type: "avocadoTunaRoll" },
-  { label: "kotlety", type: "californiaMaki" },
-  { label: "ogures", type: "californiaTunaRoll" },
-  { label: "tamato", type: "ikuraMaki" },
-  { label: "ketchup", type: "salmonMaki" },
+  { label: "steak", type: "steak" },
+  { label: "cucumber", type: "cucumber" },
+  { label: "tamato", type: "tamato" },
+  { label: "lettuce", type: "lettuce" },
+  { label: "ketchup", type: "ketchup" },
+  { label: "chees", type: "chees" },
 ];
 
 export default ({ ingredients, addIngredient, removeIngredient }) => {
