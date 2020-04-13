@@ -4,7 +4,12 @@ import classes from "./BurgerBuilder.module.css";
 import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
 
 const PRICES = {
- 
+  steak: 20,
+  cucumber: 8,
+  tamato: 7,
+  lettuce: 10,
+  chees: 25,
+  ketchup:14,
 };
 
 export default () => {
@@ -17,7 +22,7 @@ export default () => {
     ketchup:0,
     
   });
-  const [price, setPrice] = useState(100);
+  const [price, setPrice] = useState(40);
 
   function addIngredient(type) {
     const newIngredients = { ...ingredients };
@@ -26,6 +31,7 @@ export default () => {
 
     const newPrice = price + PRICES[type];
     setPrice(newPrice);
+  
   }
 
   function removeIngredient(type) {
