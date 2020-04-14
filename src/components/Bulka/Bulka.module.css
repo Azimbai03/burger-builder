@@ -1,0 +1,12 @@
+.top{
+    width: 100px;
+    height: 10px;
+    background-color: goldenrod;
+    border-radius: top 10px;
+}
+.bottom{
+    width: 100px;
+    height: 10px;
+    background-color: goldenrod;
+    border-radius: bottom 10px;
+}
