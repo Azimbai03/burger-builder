@@ -14,6 +14,7 @@ export default ({ price, ingredients }) => {
   return (
     <div className={classes.BurgerKit}>
       <div className={classes.bento}>{ingredientsOutput}</div>
+      <br/>
       <div className={classes.price}>Total price: {price} som</div>
     </div>
   );

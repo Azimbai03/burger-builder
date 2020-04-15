@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import BurgerKit from "../components/BurgerBuilder/BurgerKit/BurgerKit";
 import classes from "./BurgerBuilder.module.css";
 import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
-import Bulka from "../components/Bulka/Bulka"
+
 
 const PRICES = {
   steak: 20,
@@ -48,7 +48,7 @@ export default () => {
 
   return (
     <div className={classes.BurgerBuilder}>
-         <Bulka className="top"/>
+       
     <BurgerKit price={price} ingredients={ingredients} />
      <BurgerControls
         ingredients={ingredients}
