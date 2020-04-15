@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./BurgerControls.module.css";
 import BurgerControl from "./BurgerControl/BurgerControl";
-
+import Button from "../../UI/Button/Button"
 const CONTROLS = [
   { label: "steak", type: "steak" },
   { label: "cucumber", type: "cucumber" },
@@ -11,7 +11,13 @@ const CONTROLS = [
   { label: "chees", type: "chees" },
 ];
 
-export default ({ ingredients, addIngredient, removeIngredient }) => {
+export default ({
+   ingredients, 
+  addIngredient, 
+  removeIngredient,
+  canOrder,
+  startOrder,
+ }) => {
   const controlsOutput = CONTROLS.map((control) => (
     <BurgerControl
       key={control.type}
@@ -22,5 +28,10 @@ export default ({ ingredients, addIngredient, removeIngredient }) => {
     />
   ));
 
-  return <div className={classes.BurgerControls}>{controlsOutput}</div>;
+  return <div className={classes.BurgerControls}>
+    {controlsOutput}
+    <Button click={startOrder} enabled={canOrder}>
+      Order
+    </Button>
+  </div>;
 };

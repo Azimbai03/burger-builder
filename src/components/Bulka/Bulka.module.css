@@ -1,12 +1,6 @@
-.top{
+.BulkaClasses{
     width: 100px;
-    height: 10px;
-    background-color: gold;
-    border-radius: top 10px;
-}
-.bottom{
-    width: 100px;
-    height: 10px;
+    height: 18px;
     background-color: goldenrod;
-    border-radius: bottom 10px;
+    border-radius: 20%;
 }
