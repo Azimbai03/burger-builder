@@ -25,7 +25,6 @@ export default () => {
     
   });
   const [price, setPrice] = useState(40);
-  
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
 
@@ -52,10 +51,10 @@ export default () => {
     const newIngredients = { ...ingredients };
     newIngredients[type]++;
     setIngredients(newIngredients);
+    checkCanOrder(newIngredients);
 
     const newPrice = price + PRICES[type];
     setPrice(newPrice);
-  
   }
 
   function removeIngredient(type) {
@@ -63,6 +62,7 @@ export default () => {
       const newIngredients = { ...ingredients };
       newIngredients[type]--;
       setIngredients(newIngredients);
+      checkCanOrder(newIngredients);
 
       const newPrice = price - PRICES[type];
       setPrice(newPrice);
@@ -71,18 +71,15 @@ export default () => {
 
   return (
     <div className={classes.BurgerBuilder}>
-     
-    <BurgerKit price={price} ingredients={ingredients}> <Bulka className="top"/></BurgerKit> 
-   
-
-     <BurgerControls
+      <BurgerKit price={price} ingredients={ingredients} />
+      <BurgerControls
+        startOrder={startOrder}
+        canOrder={canOrder}
         ingredients={ingredients}
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
-        startOrder={startOrder}
-        canOrder={canOrder}
       />
-       <Modal show={isOrdering} hideCallback={cancelOrder}>
+      <Modal show={isOrdering} hideCallback={cancelOrder}>
         <OrderSummary
           ingredients={ingredients}
           finishOrder={finishOrder}
