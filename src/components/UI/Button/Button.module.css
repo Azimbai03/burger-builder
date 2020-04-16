@@ -1,7 +1,7 @@
 .Button {
     border: none;
     background-color: white;
-    color: #EC6F31;
+    color: rgb(252, 85, 2);
     font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
