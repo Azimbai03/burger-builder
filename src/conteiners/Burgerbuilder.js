@@ -13,7 +13,6 @@ const PRICES = {
   chees: 25.38,
   ketchup:14.12,
 };
-
 export default () => {
   const [ingredients, setIngredients] = useState({
     steak: 0,

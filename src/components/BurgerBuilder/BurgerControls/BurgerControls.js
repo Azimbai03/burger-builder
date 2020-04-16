@@ -27,8 +27,7 @@ export default ({
       disabled={ingredients[control.type] === 0}
     />
   ));
-
-  return <div className={classes.BurgerControls}>
+return <div className={classes.BurgerControls}>
     {controlsOutput}
     <Button click={startOrder} enabled={canOrder}>
       Order

@@ -17,10 +17,10 @@
     opacity: .8;
   }
   .green {
-    background-color: rgb(59, 148, 59);
+    background-color: rgb(0, 255, 0);
     color: white;
   }
   .red {
-    background-color: #EC6F31;
+    background-color: rgb(255, 0, 0);
     color: white;
   }
