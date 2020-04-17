@@ -4,7 +4,7 @@ import classes from './Burger.module.css';
 export default ({ type }) => {
   const burgerClasses = [classes.burger];
 
-  switch ({type}) {
+  switch (type) {
     case 'steak':
       burgerClasses.push(classes.steak);
       break;
