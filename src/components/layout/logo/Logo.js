@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from 'logo.module.css'
-i
+import classes from './logo.module.css'
 
-export default () =>  (
+
+export  () =>  (
   <div className={classes.Logo}>
 <span>Burger Builder</span>
   </div>
