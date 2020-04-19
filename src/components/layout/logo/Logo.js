@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './logo.module.css'
 
 
-export  () =>  (
+export default () =>  (
   <div className={classes.Logo}>
 <span>Burger Builder</span>
   </div>
