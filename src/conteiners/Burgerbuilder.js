@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import BurgerKit from "../components/BurgerBuilder/BurgerKit/BurgerKit";
 import classes from "./BurgerBuilder.module.css";
 import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
-
 import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary"
 import Modal from "../components/UI/Modal/Modal";
 const PRICES = {
