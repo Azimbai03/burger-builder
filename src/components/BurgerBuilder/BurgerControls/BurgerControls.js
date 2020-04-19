@@ -7,8 +7,8 @@ const CONTROLS = [
   { label: "cucumber", type: "cucumber" },
   { label: "tamato", type: "tamato" },
   { label: "lettuce", type: "lettuce" },
-  { label: "ketchup", type: "ketchup" },
   { label: "chees", type: "chees" },
+  { label: "ketchup", type: "ketchup" },
 ];
 
 export default ({
