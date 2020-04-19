@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Toolbar.module.css';
-import Nav from './Nav/Nav';
-import Logo from "../Logo/Logo";
+import Logotup from "../Logo/Logotup";
+import Navigation from './Navigation/Navigation';
 
 export default () =>  (
   <div className={classes.Toolbar}>
-   <Logo/>
-    <Nav />
+   <Logotup/>
+    <Navigation />
   </div>
 );
