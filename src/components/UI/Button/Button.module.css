@@ -1,26 +1,26 @@
 .Button {
-    border: none;
-    background-color: white;
-    color: rgb(252, 85, 2);
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
-    font-family: 'Nanum Brush Script', cursive;
-    padding: 5px 10px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-  }
-  .Button:disabled {
-    opacity: .5;
-  }
-  .Button:not(:disabled):hover {
-    opacity: .8;
-  }
-  .green {
-    background-color: rgb(0, 255, 0);
-    color: white;
-  }
-  .red {
-    background-color: rgb(255, 0, 0);
-    color: white;
-  }
+  border: none;
+  background-color: white;
+  color: #EC6F31;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Nanum Brush Script', cursive;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.Button:disabled {
+  opacity: .5;
+}
+.Button:not(:disabled):hover {
+  opacity: .8;
+}
+.green {
+  background-color: rgb(59, 148, 59);
+  color: white;
+}
+.red {
+  background-color: #EC6F31;
+  color: white;
+}

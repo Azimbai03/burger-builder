@@ -7,7 +7,10 @@ import Drawer from "../../components/layout/Drawer/Drawer";
 export default ({ children }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  function toggleDrawer() {setDrawerOpen(!drawerOpen);}
+  function toggleDrawer() {
+    setDrawerOpen(!drawerOpen);
+  }
+
   return (
     <div className={classes.Layout}>
       <Toolbar toggleDrawer={toggleDrawer} />

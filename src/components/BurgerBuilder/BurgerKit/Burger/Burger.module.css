@@ -37,3 +37,10 @@
     background-color: white;
     
   }
+  @media (min-width: 900px) {
+    .Burger {
+      width: 50px;
+      height: 62px;
+      margin-top: -24px;
+    }
+  }

@@ -1,21 +1,32 @@
 .BurgerControl {
-    display: flex;
-    align-items: center;
-  }
- 
+  display: flex;
+  align-items: center;
+}
+.BurgerControl .label {
+  color: white;
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 1.5rem;
+  padding: .4rem 1rem;
+}
 .BurgerControl button {
-    width: 20px;
-    height: 20px;
-    border: none;
-    background-color: goldenrod;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border-radius: 100%;
-    cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: white;
+  color: #EC6F31;
+  font-weight: bold;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.BurgerControl button:disabled {
+  opacity: .5;
+}
+.BurgerControl button:not(:disabled):hover {
+  opacity: .8;
+}
+
+@media (min-width: 500px) {
+  .BurgerControl .label {
+    font-size: 2rem;
   }
-  .BurgerControl button:disabled {
-    opacity: .5;
-  }
-  .BurgerControl button:not(:disabled):hover {
-    opacity: .8;
-  }
+}

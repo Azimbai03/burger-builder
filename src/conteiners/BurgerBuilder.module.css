@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
   
-    height: 100vh;
+    height: auto;
     background-color: green;
   justify-content: space-evenly;
     

@@ -3,4 +3,8 @@
  width: 400px;
     background-color: white;
 }
- 
+@media (min-width: 500px) {
+    .BurgerKit {
+      width: 495px;
+    }
+  }
