@@ -1,7 +1,9 @@
 .BurgerControls {
     border: 3px solid yellow;
 width: 90%;
+max-width: 375px;
 height: auto;
+max-height: 400px;
     padding-top: .5rem;
     padding-left: .5rem;
   
