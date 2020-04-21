@@ -4,10 +4,11 @@ width: 90%;
 max-width: 375px;
 height: auto;
 max-height: 400px;
+
     padding-top: .5rem;
     padding-left: .5rem;
+  display: flex;
   
-    display: flex;
     flex-flow: column nowrap;
     align-items: center;
   }

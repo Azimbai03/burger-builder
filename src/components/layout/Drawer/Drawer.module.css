@@ -19,6 +19,7 @@
   @media (min-width: 500px) {
     .Drawer {
       display: none;
+      height: 0px;
     }
   } 
    
