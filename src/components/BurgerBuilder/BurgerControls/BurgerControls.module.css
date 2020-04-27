@@ -1,5 +1,6 @@
 .BurgerControls {
     border: 3px solid yellow;
+    background-color: green;
     padding-bottom: 1rem;
 width: 90%;
 max-width: 375px;
