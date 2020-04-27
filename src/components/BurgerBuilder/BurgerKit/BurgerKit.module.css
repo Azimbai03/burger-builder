@@ -1,7 +1,7 @@
 .BurgerKit{
  height: auto 400px ;
  width: 400px;
-    background-color: white;
+    background-color: antiquewhite;
 }
 @media (min-width: 500px) {
     .BurgerKit {
