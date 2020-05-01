@@ -6,22 +6,17 @@ import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary"
 import Modal from "../components/UI/Modal/Modal";
 const PRICES = {
   steak: 20.5,
-  cucumber: 8.10,
   tamato: 7.2,
   lettuce: 10.4,
   chees: 25.38,
-  ketchup:14.12,
 };
 export default () => {
   const [ingredients, setIngredients] = useState({
     steak: 0,
-    cucumber: 0,
-    tamato: 0,
+   tamato: 0,
     lettuce: 0,
     chees: 0,
-    ketchup:0,
-    
-  });
+   });
   const [price, setPrice] = useState(40);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);

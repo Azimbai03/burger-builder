@@ -4,11 +4,9 @@ import Button from "../../UI/Button/Button";
 
 const LABELS = {
     steak: "steak",
-    cucumber: "cucumber",
-    tamato : "tamato",
+   tamato : "tamato",
     lettuce: "lettuce",
-    ketchup: "ketchup",
-    chees: "chees",
+   chees: "chees",
 };
 
 export default ({ ingredients, cancelOrder, finishOrder, price }) => {
@@ -16,7 +14,8 @@ export default ({ ingredients, cancelOrder, finishOrder, price }) => {
     .filter((ingredient) => ingredients[ingredient] > 0)
     .map((ingredient) => (
       <li>
-        {LABELS[ingredient]}: {ingredients[ingredient]}
+        {LABELS[ingredient]
+        }: {ingredients[ingredient]}
       </li>
     ));
 

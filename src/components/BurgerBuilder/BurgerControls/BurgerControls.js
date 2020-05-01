@@ -4,11 +4,10 @@ import BurgerControl from "./BurgerControl/BurgerControl";
 import Button from "../../UI/Button/Button"
 const CONTROLS = [
   { label: "steak", type: "steak" },
-  { label: "cucumber", type: "cucumber" },
-  { label: "tamato", type: "tamato" },
+ { label: "tamato", type: "tamato" },
   { label: "lettuce", type: "lettuce" },
   { label: "chees", type: "chees" },
-  { label: "ketchup", type: "ketchup" },
+ 
 ];
 
 export default ({

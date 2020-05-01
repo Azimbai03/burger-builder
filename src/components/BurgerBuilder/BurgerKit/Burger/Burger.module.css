@@ -7,34 +7,17 @@
     margin-bottom: .5rem;
   }
   .steak {
-    border-radius: 100%;
-    border: 15px solid rgb(230, 159, 29);
-    background-color: white;
-  }
-  .cucumber {
-    border-radius: 100%;
-    border: 15px solid yellow;
-    background-color: green;
+   background-image: url(../../../../assets/steak.PNG);
   }
   .tamato {
-    border-radius: 20%;
-    border: 15px solid tomato;
-    background-color: white;
+  background-image: url(../../../../assets/tamato.PNG);
   }
   .lettuce {
-    border-radius: 20%;
-    border: 15px solid greenyellow;
-    background-color: white;
+  background-image: url(../../../../assets/lettuce.PNG);
   }
-  .ketchup {
-    border-radius: 100%;
-    border: 15px solid red;
-    background-color: white;
-  }
+ 
   .chees{
-    border-radius: 100%;
-    border: 15px solid yellow;
-    background-color: white;
+    background-image: url(../../../../assets/chees.PNG);
     
   }
   @media (min-width: 900px) {
