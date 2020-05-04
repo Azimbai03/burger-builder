@@ -9,20 +9,21 @@
   .steak {
     height:60px;
     background-size: 100%;
-    background-image: url(../../../../assets/steak.PNG);
+   background-image: url(../../../../assets/steak.PNG);
   }
-  .tamato { height:30px;
+  .tamato {height: 30px;
     background-size: 100%;
   background-image: url(../../../../assets/tamato.PNG);
   }
-  .lettuce { height:60px;
+  .lettuce {
+    height: 60px;
     background-size: 100%;
   background-image: url(../../../../assets/lettuce.PNG);
   }
  
   .chees{
     background-image: url(../../../../assets/chees.PNG);
-    height:25px;
+    height: 25px;
     background-size: 100%;
   }
   @media (min-width: 900px) {

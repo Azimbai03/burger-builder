@@ -4,6 +4,7 @@ import classes from "./BurgerBuilder.module.css";
 import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
 import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary"
 import Modal from "../components/UI/Modal/Modal";
+import axios from "../axios"
 const PRICES = {
   chees: 15.38,
   steak: 5.5,
@@ -39,7 +40,21 @@ export default () => {
   }
 
   function finishOrder() {
-    alert("You are on the checkout page!");
+    const order = {
+      ingredients: ingredients,
+      price: price,
+      delivery: "Fast",
+      customer: {
+        name: "Bakyt",
+        phone: "0700700700",
+        address: {
+          street: "123 Gebze",
+          city: "Karakol",
+        },
+      },
+    };
+
+    axios.post("/orders.json", order).then((response) => console.log(response));
   }
 
   function addIngredient(type) {
