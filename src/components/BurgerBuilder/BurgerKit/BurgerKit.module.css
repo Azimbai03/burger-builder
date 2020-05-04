@@ -3,6 +3,12 @@
  width: auto;
 background-color: white;
 }
+.price{
+
+  color: green;
+  font-size: 25px;
+  font-family: 'Lobster', cursive;
+}
 @media (min-width: 500px) {
     .BurgerKit {
       width: 495px;
