@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Bulka.module.css';
+import classes from './BulkaBottom.module.css';
 
 export default ({ children }) => {
 
   return (
-    <div className={classes.Bulka}>
+    <div className={classes.BulkaBottom}>
     </div>
   );
 };
