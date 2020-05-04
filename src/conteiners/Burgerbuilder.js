@@ -4,7 +4,8 @@ import classes from "./BurgerBuilder.module.css";
 import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
 import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary"
 import Modal from "../components/UI/Modal/Modal";
-import axios from "../axios"
+import axios from "../axios";
+import Loading from "../components/UI/Loading/Loading";
 const PRICES = {
   chees: 15.38,
   steak: 5.5,
@@ -23,6 +24,7 @@ export default () => {
   const [price, setPrice] = useState(40);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function checkCanOrder(ingredients) {
     const total = Object.keys(ingredients).reduce((total, ingredient) => {
@@ -53,8 +55,12 @@ export default () => {
         },
       },
     };
-
-    axios.post("/orders.json", order).then((response) => console.log(response));
+    
+setLoading(true);
+    axios.post("/orders.", order).then((response) => 
+    {setLoading(false);
+      setIsOrdering(false);
+    });
   }
 
   function addIngredient(type) {
@@ -66,6 +72,18 @@ export default () => {
     const newPrice = price + PRICES[type];
     setPrice(newPrice);
   }
+  let orderSummary = <Loading/>;
+  if (!loading) {
+    orderSummary = (
+      <OrderSummary
+        ingredients={ingredients}
+        finishOrder={finishOrder}
+        cancelOrder={cancelOrder}
+        price={price}
+      />
+    );
+  }
+
 
   function removeIngredient(type) {
     if (ingredients[type] >= 1) {
@@ -90,12 +108,7 @@ export default () => {
         removeIngredient={removeIngredient}
       />
       <Modal show={isOrdering} hideCallback={cancelOrder}>
-        <OrderSummary
-          ingredients={ingredients}
-          finishOrder={finishOrder}
-          cancelOrder={cancelOrder}
-          price={price}
-        />
+       {orderSummary}
       </Modal>
     </div>
   );
