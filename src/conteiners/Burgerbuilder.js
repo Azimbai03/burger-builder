@@ -100,6 +100,7 @@ setLoading(true);
   return (
     <div className={classes.BurgerBuilder}>
       <BurgerKit price={price} ingredients={ingredients} />
+      <div className={classes.price}>{price.toFixed(2)} som</div>
       <BurgerControls
         startOrder={startOrder}
         canOrder={canOrder}
@@ -110,6 +111,7 @@ setLoading(true);
       <Modal show={isOrdering} hideCallback={cancelOrder}>
        {orderSummary}
       </Modal>
+     
     </div>
   );
 };

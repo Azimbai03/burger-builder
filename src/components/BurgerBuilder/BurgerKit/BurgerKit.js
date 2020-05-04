@@ -17,8 +17,9 @@ Object.keys(ingredients).forEach((type) => {
       <Bulka/>
       <div className={classes.bento}>{ingredientsOutput}</div>
       <br/>
-      <div className={classes.price}>{price.toFixed(2)} som</div>
-    <BulkaBottom/>
+     
+    <BulkaBottom/> 
+    
     </div>
   );
 };
