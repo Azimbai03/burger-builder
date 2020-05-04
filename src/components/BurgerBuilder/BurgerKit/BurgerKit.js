@@ -16,10 +16,7 @@ Object.keys(ingredients).forEach((type) => {
     <div className={classes.BurgerKit}>
       <Bulka/>
       <div className={classes.bento}>{ingredientsOutput}</div>
-      <br/>
-     
-    <BulkaBottom/> 
-    
-    </div>
+    <Bulkaottom/> 
+        </div>
   );
 };
