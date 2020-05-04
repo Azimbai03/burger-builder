@@ -7,18 +7,23 @@
     margin-bottom: .5rem;
   }
   .steak {
-   background-image: url(../../../../assets/steak.PNG);
+    height:60px;
+    background-size: 100%;
+    background-image: url(../../../../assets/steak.PNG);
   }
-  .tamato {
+  .tamato { height:30px;
+    background-size: 100%;
   background-image: url(../../../../assets/tamato.PNG);
   }
-  .lettuce {
+  .lettuce { height:60px;
+    background-size: 100%;
   background-image: url(../../../../assets/lettuce.PNG);
   }
  
   .chees{
     background-image: url(../../../../assets/chees.PNG);
-    
+    height:25px;
+    background-size: 100%;
   }
   @media (min-width: 900px) {
     .Burger {

@@ -3,10 +3,11 @@ import classes from "./BurgerControls.module.css";
 import BurgerControl from "./BurgerControl/BurgerControl";
 import Button from "../../UI/Button/Button"
 const CONTROLS = [
+  { label: "chees", type: "chees" },
   { label: "steak", type: "steak" },
  { label: "tamato", type: "tamato" },
   { label: "lettuce", type: "lettuce" },
-  { label: "chees", type: "chees" },
+  
  
 ];
 

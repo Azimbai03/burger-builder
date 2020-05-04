@@ -5,17 +5,19 @@ import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerCon
 import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary"
 import Modal from "../components/UI/Modal/Modal";
 const PRICES = {
-  steak: 20.5,
+  chees: 15.38,
+  steak: 5.5,
   tamato: 7.2,
   lettuce: 10.4,
-  chees: 25.38,
+  
 };
 export default () => {
   const [ingredients, setIngredients] = useState({
+    chees: 0,
     steak: 0,
    tamato: 0,
     lettuce: 0,
-    chees: 0,
+    
    });
   const [price, setPrice] = useState(40);
   const [canOrder, setCanOrder] = useState(false);
