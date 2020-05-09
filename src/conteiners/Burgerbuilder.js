@@ -1,30 +1,28 @@
-import React, { useState } from "react";
-import BurgerKit from "../components/BurgerBuilder/BurgerKit/BurgerKit";
-import classes from "./BurgerBuilder.module.css";
-import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
-import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary"
-import Modal from "../components/UI/Modal/Modal";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "../axios";
+import BurgerKit from "../components/BurgerBuilder/BurgerKit/BurgerKit";
+import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
+import Modal from "../components/UI/Modal/Modal";
+import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary";
 import Loading from "../components/UI/Loading/Loading";
+import withErrorHandler from "../hoc/withErrorHandler";
+import classes from "./BurgerBuilder.module.css";
+
 const PRICES = {
-  chees: 15.38,
-  steak: 5.5,
-  tamato: 7.2,
-  lettuce: 10.4,
-  
+  chees: 8.5,
+  steak: 9.5,
+ tamato: 10.2,
+  lettuce: 11.2,
 };
-export default () => {
-  const [ingredients, setIngredients] = useState({
-    chees: 0,
-    steak: 0,
-   tamato: 0,
-    lettuce: 0,
-    
-   });
-  const [price, setPrice] = useState(40);
+
+export default withErrorHandler(() => {
+  const [ingredients, setIngredients] = useState(null);
+  const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   function checkCanOrder(ingredients) {
     const total = Object.keys(ingredients).reduce((total, ingredient) => {
@@ -42,24 +40,17 @@ export default () => {
   }
 
   function finishOrder() {
-    const order = {
-      ingredients: ingredients,
-      price: price,
-      delivery: "Fast",
-      customer: {
-        name: "Bakyt",
-        phone: "0700700700",
-        address: {
-          street: "123 Gebze",
-          city: "Karakol",
-        },
-      },
-    };
-    
-setLoading(true);
-    axios.post("/orders.json", order).then((response) => 
-    {setLoading(false);
-      setIsOrdering(false);
+    const queryParams = Object.keys(ingredients).map(
+      (ingredient) =>
+        encodeURIComponent(ingredient) +
+        "=" +
+        encodeURIComponent(ingredients[ingredient])
+    );
+    queryParams.push("price=" + encodeURIComponent(price.toFixed(2)));
+
+    history.push({
+      pathname: "/checkout",
+      search: queryParams.join("&"),
     });
   }
 
@@ -72,18 +63,6 @@ setLoading(true);
     const newPrice = price + PRICES[type];
     setPrice(newPrice);
   }
-  let orderSummary = <Loading/>;
-  if (!loading) {
-    orderSummary = (
-      <OrderSummary
-        ingredients={ingredients}
-        finishOrder={finishOrder}
-        cancelOrder={cancelOrder}
-        price={price}
-      />
-    );
-  }
-
 
   function removeIngredient(type) {
     if (ingredients[type] >= 1) {
@@ -97,21 +76,47 @@ setLoading(true);
     }
   }
 
-  return (
-    <div className={classes.BurgerBuilder}>
-      <BurgerKit price={price} ingredients={ingredients} />
-     
-      <BurgerControls
-        startOrder={startOrder}
-        canOrder={canOrder}
+  useEffect(() => {
+    axios
+      .get("/ingredients.json")
+      .then((response) => setIngredients(response.data))
+      .catch((error) => {});
+  }, []);
+
+  let output = <Loading />;
+  if (ingredients) {
+    output = (
+      <>
+        <BurgerKit price={price} ingredients={ingredients} />
+        <BurgerControls
+          startOrder={startOrder}
+          canOrder={canOrder}
+          ingredients={ingredients}
+          addIngredient={addIngredient}
+          removeIngredient={removeIngredient}
+        />
+      </>
+    );
+  }
+
+  let orderSummary = <Loading />;
+  if (isOrdering && !loading) {
+    orderSummary = (
+      <OrderSummary
         ingredients={ingredients}
-        addIngredient={addIngredient}
-        removeIngredient={removeIngredient}
+        finishOrder={finishOrder}
+        cancelOrder={cancelOrder}
+        price={price}
       />
+    );
+  }
+
+  return (
+    <div className={classes.Burgerbuilder}>
+      {output}
       <Modal show={isOrdering} hideCallback={cancelOrder}>
-       {orderSummary}
+        {orderSummary}
       </Modal>
-     
     </div>
   );
-};
+}, axios);
