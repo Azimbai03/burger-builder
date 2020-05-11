@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "../axios";
 import BurgerKit from "../components/BurgerBuilder/BurgerKit/BurgerKit";
-import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
+
 import Modal from "../components/UI/Modal/Modal";
 import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary";
 import Loading from "../components/UI/Loading/Loading";
 import withErrorHandler from "../hoc/withErrorHandler";
 import classes from "./BurgerBuilder.module.css";
+import BurgerControl from "../components/BurgerBuilder/BurgerControls/BurgerControl/BurgerControl";
 
 const PRICES = {
   chees: 8.5,
@@ -88,7 +89,7 @@ export default withErrorHandler(() => {
     output = (
       <>
         <BurgerKit price={price} ingredients={ingredients} />
-        <BurgerControls
+        <BurgerControl
           startOrder={startOrder}
           canOrder={canOrder}
           ingredients={ingredients}
@@ -112,7 +113,7 @@ export default withErrorHandler(() => {
   }
 
   return (
-    <div className={classes.Burgerbuilder}>
+    <div className={classes.BurgerBuilder}>
       {output}
       <Modal show={isOrdering} hideCallback={cancelOrder}>
         {orderSummary}
