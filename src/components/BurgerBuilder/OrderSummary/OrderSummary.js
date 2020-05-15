@@ -13,9 +13,8 @@ export default ({ ingredients, cancelOrder, finishOrder, price }) => {
   const ingredientsOutput = Object.keys(ingredients)
     .filter((ingredient) => ingredients[ingredient] > 0)
     .map((ingredient) => (
-      <li>
-        {LABELS[ingredient]
-        }: {ingredients[ingredient]}
+      <li key={ingredient}>
+        {LABELS[ingredient]}: {ingredients[ingredient]}
       </li>
     ));
 
@@ -26,8 +25,12 @@ export default ({ ingredients, cancelOrder, finishOrder, price }) => {
       <ul>{ingredientsOutput}</ul>
       <p>Total price: {price.toFixed(2)} som</p>
       <p>Would you like to checkout?</p>
-      <Button click={finishOrder} green>Checkout</Button>
-      <Button click={cancelOrder} red>Cancel</Button>
+      <Button click={finishOrder} green>
+        Checkout
+      </Button>
+      <Button click={cancelOrder} red>
+        Cancel
+      </Button>
     </div>
   );
 };

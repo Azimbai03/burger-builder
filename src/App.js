@@ -8,7 +8,7 @@ export default () => {
   return (
     <div className="App">
       <Layout>
-        <Switch>
+      <Switch>
           <Route path="/" exact>
             <Redirect to="/builder" />
           </Route>
