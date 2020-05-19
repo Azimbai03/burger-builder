@@ -2,10 +2,10 @@
  height: auto;
  width: auto;
 background-color: white;
+
 }
 .price{
-
-  color: green;
+color: green;
   font-size: 25px;
   font-family: 'Lobster', cursive;
 }
