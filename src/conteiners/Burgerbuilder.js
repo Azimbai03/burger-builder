@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import axios from "../axios";
 import BurgerKit from "../components/BurgerBuilder/BurgerKit/BurgerKit";
 import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
 import Modal from "../components/UI/Modal/Modal";
 import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary";
 import Loading from "../components/UI/Loading/Loading";
-import withErrorHandler from "../hoc/withErrorHandler";
 import classes from "./BurgerBuilder.module.css";
 
 

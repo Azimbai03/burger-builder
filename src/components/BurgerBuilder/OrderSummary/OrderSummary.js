@@ -3,10 +3,10 @@ import classes from "./OrderSummary.module.css";
 import Button from "../../UI/Button/Button";
 
 const LABELS = {
-    steak: "steak",
-   tamato : "tamato",
-    lettuce: "lettuce",
-   chees: "chees",
+    steak: "Steak",
+   tamato : "Tomato",
+    lettuce: "Lettuce",
+   chees: "Cheese",
 };
 
 export default ({ ingredients, cancelOrder, finishOrder, price }) => {

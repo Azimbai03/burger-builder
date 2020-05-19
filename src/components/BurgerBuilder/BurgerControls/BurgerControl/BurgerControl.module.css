@@ -13,9 +13,9 @@
   height: 30px;
   border: none;
   background-color: white;
-  color: #EC6F31;
+  color: rgb(37, 160, 0);
   font-weight: bold;
-  border-radius: 100%;
+  border-radius: 23%;
   cursor: pointer;
 }
 .BurgerControl button:disabled {

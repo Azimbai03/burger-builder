@@ -30,15 +30,14 @@
     height: 25px;
     background-size: 100%;
   }
-  @media (min-width: 351px) {
+  @media (min-width: 95%) {
     .Burger {
-      
-      width: 50px;
+       width: 50px;
       height: 62px;
       margin-top: -24px;
     }
     .steak {
-      width: 391px;
+      width: 90%;
       height:60px;
       background-repeat: no-repeat;
       background-size: 100%;
@@ -47,12 +46,12 @@
     .tamato {height: 30px;
       background-size: 100%;
       background-repeat: no-repeat;
-      width: 391px;
+      width: 90%;
     background-image: url(../../../../assets/tamato.PNG);
     }
     .lettuce {
       height: 60px;
-      width: 391px;
+      width: 92%;
       background-repeat: no-repeat;
       background-size: 100%;
     background-image: url(../../../../assets/lettuce.PNG);
@@ -62,7 +61,7 @@
       background-repeat: no-repeat;
       background-image: url(../../../../assets/chees.PNG);
       height: 25px;
-      width: 391px;
+      width: 92%;
       background-size: 100%;
     }
   }
