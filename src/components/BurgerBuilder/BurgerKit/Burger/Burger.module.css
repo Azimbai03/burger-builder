@@ -30,7 +30,7 @@
     height: 25px;
     background-size: 100%;
   }
-  @media (min-width: 431px) {
+  @media (min-width: 351px) {
     .Burger {
       
       width: 50px;
