@@ -3,6 +3,7 @@ import './App.css';
 import Layout from './components/layout/Layout';
 import Burgerbuilder from './conteiners/Burgerbuilder';
 import Checkout from './conteiners/Checkout/Checkout';
+import Orders from './conteiners/Order/Orders'
 import { Route, Switch, Redirect } from "react-router-dom";
 export default () => {
   return (
@@ -17,6 +18,9 @@ export default () => {
           </Route>
           <Route path="/checkout">
             <Checkout />
+          </Route>
+          <Route path="/orders">
+            <Orders />
           </Route>
         </Switch>
       </Layout>
