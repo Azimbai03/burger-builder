@@ -11,10 +11,11 @@ const initialState = {
 };
 
 const PRICES = {
-    Chees:5,
-    steak:6,
-     tamato:7,
-     lettuce:8,
+    chees: 15.38,
+    steak: 5.5,
+    tamato: 7.2,
+    lettuce: 10.4,
+    
 };
 
 export default (state = initialState, action) => {

@@ -6,29 +6,29 @@ import withErrorHandler from "../../hoc/withErrorHandler";
 import Loading from "../../components/UI/Loading/Loading";
 
 export default withErrorHandler(() => {
-  const [orders, setOrders] = useState(null);
+  const [Orders, setOrders] = useState(0);
 
   useEffect(() => {
     axios
-      .get("/orders.json")
+      .get("/Orders.json")
       .then((response) => {
         setOrders(response.data);
       })
       .catch((error) => {});
   }, []);
 
-  let ordersOutput = <Loading />;
-  if (orders !== null) {
-    console.log(orders);
-    ordersOutput = Object.keys(orders).map((id) => (
-      <Order key={id} {...orders[id]} />
+  let OrdersOutput = <Loading />;
+  if (Orders !== null) {
+    console.log(Orders);
+    OrdersOutput = Object.keys(Orders).map((id) => (
+      <Order key={id} {...Orders[id]} />
     ));
   }
 
   return (
     <div className={classes.Orders}>
       <h1>Orders</h1>
-      {ordersOutput}
+      {OrdersOutput}
     </div>
   );
 }, axios);
