@@ -11,26 +11,21 @@ const CONTROLS = [
  
 ];
 
-export default ({
-   ingredients, 
-  addIngredient, 
-  removeIngredient,
-  canOrder,
-  startOrder,
- }) => {
+export default ({ canOrder, ingredients, startOrder }) => {
   const controlsOutput = CONTROLS.map((control) => (
     <BurgerControl
       key={control.type}
       control={control}
-      addIngredient={addIngredient}
-      removeIngredient={removeIngredient}
       disabled={ingredients[control.type] === 0}
     />
   ));
-return <div className={classes.BurgerControls}>
-    {controlsOutput}
-    <Button click={startOrder} enabled={canOrder}>
-      Order
-    </Button>
-  </div>;
+
+  return (
+    <div className={classes.BurgerControls}>
+      {controlsOutput}
+      <Button click={startOrder} enabled={canOrder}>
+        Order
+      </Button>
+    </div>
+  );
 };

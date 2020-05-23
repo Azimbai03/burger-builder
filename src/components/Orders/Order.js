@@ -2,10 +2,10 @@ import React from "react";
 import classes from "./Order.module.css";
 
 const CONTROLS = {
-    steak: "Steak",
-    tamato : "Tomato",
-     lettuce: "Lettuce",
-    chees: "Cheese",
+  steak: "steak",
+  tamato : "tamato",
+   lettuce: "lettuce",
+  chees: "chees",
 };
 
 export default ({ price, ingredients, details }) => {
@@ -15,13 +15,23 @@ export default ({ price, ingredients, details }) => {
     </span>
   ));
 
+  const detailsOutput = (
+    <div className={classes.details}>
+      {details
+        ? details.name + ", " + details.phone + ", " + details.address
+        : "No details available"}
+    </div>
+  );
+
   return (
     <div className={classes.Order}>
-      <div className={classes.details}>
-        {details.name}, {details.phone}, {details.address}
-      </div>
-      <div className={classes.price}>{price} som</div>
+      {detailsOutput}
+      <div className={classes.price}>{price.toFixed(2)} som</div>
       <div className={classes.ingredients}>{ingredientsOutput}</div>
     </div>
   );
 };
+
+
+
+
