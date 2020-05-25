@@ -56,7 +56,6 @@ export default withErrorHandler(() => {
 
   return (
     <div className={classes.BurgerBuilder}>
-      <h1>Burger builder</h1>
       {output}
       <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
         {orderSummary}
