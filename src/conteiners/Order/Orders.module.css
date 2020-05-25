@@ -6,3 +6,11 @@
     margin: 0 auto;
     justify-content: space-between;
   }
+  h1{
+    margin-left: 39%;
+    width: 100%;
+    color: limegreen;
+    font-family: cursive;
+    font-size: 45PX;
+
+  }
