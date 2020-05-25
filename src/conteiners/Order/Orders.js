@@ -6,11 +6,11 @@ import withErrorHandler from "../../hoc/withErrorHandler";
 import Loading from "../../components/UI/Loading/Loading";
 
 export default withErrorHandler(() => {
-  const [Orders, setOrders] = useState(0);
+  const [orders, setOrders] = useState(0);
 
   useEffect(() => {
     axios
-      .get("/Orders.json")
+      .get("/orders.json")
       .then((response) => {
         setOrders(response.data);
       })
@@ -18,10 +18,10 @@ export default withErrorHandler(() => {
   }, []);
 
   let OrdersOutput = <Loading />;
-  if (Orders !== null) {
-    console.log(Orders);
-    OrdersOutput = Object.keys(Orders).map((id) => (
-      <Order key={id} {...Orders[id]} />
+  if (orders !== null) {
+    console.log(orders);
+    OrdersOutput = Object.keys(orders).map((id) => (
+      <Order key={id} {...orders[id]} />
     ));
   }
 
