@@ -23,12 +23,25 @@
     background-size: 100%;
   background-image: url(../../../../assets/lettuce.PNG);
   }
- 
+  .onion {
+    height: 30px;
+width:465px ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  background-image: url(../../../../assets/onion.PNG);
+  }
   .chees{
     background-repeat: no-repeat;
     background-image: url(../../../../assets/chees.PNG);
     height: 25px;
     background-size: 100%;
+  }
+  .kettchup {
+    height: 30px;
+width:465px ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  background-image: url(../../../../assets/kettchup.PNG);
   }
   @media (min-width: 350px) {
     .Burger {

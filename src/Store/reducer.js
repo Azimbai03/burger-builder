@@ -3,9 +3,12 @@ import * as actions from "./actions";
 const initialState = {
   ingredients: {
  chees:0,
+  onion: 0,
   steak:0,
    tamato:0,
    lettuce:0,
+  
+   kettchup:0,
   },
   price: 0,
 };
@@ -15,7 +18,8 @@ const PRICES = {
     steak: 5.5,
     tamato: 7.2,
     lettuce: 10.4,
-    
+    onion: 5.2,
+    kettchup:5.2,
 };
 
 export default (state = initialState, action) => {
