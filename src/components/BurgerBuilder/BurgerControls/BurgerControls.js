@@ -7,8 +7,8 @@ const CONTROLS = [
   { label: "Steak", type: "steak" },
  { label: "Tomato", type: "tamato" },
   { label: "Lettuce", type: "lettuce" },
-  { label: "onion", type: "onion" },
-  { label: "kettchup", type: "kettchup" },
+  { label: "Onion", type: "onion" },
+  { label: "Kettchup", type: "kettchup" },
  
 ];
 

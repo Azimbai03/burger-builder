@@ -1,5 +1,6 @@
 .CheckoutForm {
     display: flex;
+    min-width: 350px;
     flex-flow: column nowrap;
   }
   .CheckoutForm input,
