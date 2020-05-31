@@ -25,7 +25,7 @@
   }
   .onion {
     height: 30px;
-width:465px ;
+width:94% ;
     background-repeat: no-repeat;
     background-size: 100%;
   background-image: url(../../../../assets/onion.PNG);
@@ -38,7 +38,7 @@ width:465px ;
   }
   .kettchup {
     height: 30px;
-width:465px ;
+width:95% ;
     background-repeat: no-repeat;
     background-size: 100%;
   background-image: url(../../../../assets/kettchup.PNG);
@@ -77,5 +77,18 @@ width:465px ;
       height: 25px;
       width: 94%;
       background-size: 100%;
+    }
+    .chees{
+      background-repeat: no-repeat;
+      background-image: url(../../../../assets/chees.PNG);
+      height: 25px;
+      background-size: 100%;
+    }
+    .kettchup {
+      height: 30px;
+  width:95% ;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    background-image: url(../../../../assets/kettchup.PNG);
     }
   }
