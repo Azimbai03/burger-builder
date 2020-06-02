@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./BurgerControl.module.css";
 import { useDispatch } from "react-redux";
-import { ADD_INGREDIENT, REMOVE_INGREDIENT } from "../../../../Store/actions";
+import { ADD_INGREDIENT, REMOVE_INGREDIENT } from "../../../../Store/actions/types";
 
 export default ({ control, disabled }) => {
   const dispatch = useDispatch();
