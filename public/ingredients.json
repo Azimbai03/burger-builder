@@ -1,0 +1,8 @@
+{
+    " chees":{ "quantity": 1, "price": 15.38, "label": "cheese" },
+"onion": { "quantity": 1, "price": 5.2, "label": "Onion" },
+"steak":{ "quantity": 1, "price": 5.5, "label": "Steak" },
+ "tamato":{ "quantity": 1, "price": 7.2, "label": "Tomato" },
+ "lettuce":{ "quantity": 1, "price": 10.4, "label": "Lettuce" },
+"kettchup":{ "quantity": 1, "price": 5.2, "label": "Kettchup" }
+}

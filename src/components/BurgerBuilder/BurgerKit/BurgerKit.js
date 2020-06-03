@@ -5,11 +5,11 @@ import Bulka from "../../Bulka/Bulka"
 import BulkaBottom from "../../Bulka/BulkaBottom";
 export default ({ price, ingredients }) => {
   let ingredientsOutput = [];
-
-Object.keys(ingredients).forEach((type) => {
- for (let i = 0; i < ingredients[type]; i++) {
- ingredientsOutput.push(<Burger key={type + i} type={type} />);
-    }
+  Object.keys(ingredients).forEach((ingredient) => {
+    for (let i = 0; i < ingredients[ingredient].quantity; i++) {
+      ingredientsOutput.push(<Burger key={ingredient + i} type={ingredient} />);
+    
+ }
   });
 
   return (

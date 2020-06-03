@@ -1,9 +1,8 @@
 .CheckoutForm {
-    display: flex;
-    min-width: 350px;
-    flex-flow: column nowrap;
-  }
-  .CheckoutForm input,
+  display: flex;
+  flex-flow: column nowrap;
+}
+.CheckoutForm input,
 .CheckoutForm select {
   padding: 0.5em 1em;
   border: 0;

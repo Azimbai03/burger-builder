@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import axios from "../../axios";
 import Order from "../../components/Orders/Order";
 import classes from "./Orders.module.css";
-import withErrorHandler from "../../hoc/withErrorHandler";
+import withErorHandler from "../../hoc/withErrorHandler";
 import Loading from "../../components/UI/Loading/Loading";
+import { load } from "../../Store/actions/orders";
+import { useDispatch, useSelector } from "react-redux";
 
-export default withErrorHandler(() => {
-  const [orders, setOrders] = useState(0);
+export default withErorHandler(() => {
+  const dispatch = useDispatch();
+  const { orders } = useSelector(state => state.orders);
 
   useEffect(() => {
-    axios
-      .get("/orders.json")
-      .then((response) => {
-        setOrders(response.data);
-      })
-      .catch((error) => {});
-  }, []);
+    load(dispatch);
+  }, [dispatch]);
 
-  let OrdersOutput = <Loading />;
-  if (orders !== null) {
-    console.log(orders);
-    OrdersOutput = Object.keys(orders).map((id) => (
+  let ordersOutput = <Loading />;
+  if (orders) {
+    ordersOutput = Object.keys(orders).map((id) => (
       <Order key={id} {...orders[id]} />
     ));
+  }
+  if (orders === null) {
+    ordersOutput = <h3>No orders found</h3>;
   }
 
   return (
     <div className={classes.Orders}>
       <h1>Orders</h1>
-      {OrdersOutput}
+      {ordersOutput}
     </div>
   );
 }, axios);

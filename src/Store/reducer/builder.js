@@ -1,50 +1,33 @@
-import * as actions from "../actions/types";
+import * as types from "../actions/types";
 
 const initialState = {
-  ingredients: {
- chees:0,
-  onion: 0,
-  steak:0,
-   tamato:0,
-   lettuce:0,
-  
-   kettchup:0,
-  },
-  price: 0,
-};
-
-const PRICES = {
-    chees: 15.38,
-    steak: 5.5,
-    tamato: 7.2,
-    lettuce: 10.4,
-    onion: 5.2,
-    kettchup:5.2,
+  ingredients: null,
+  price: 100,
 };
 
 export default (state = initialState, action) => {
-  switch (action.type) {
-    case actions.ADD_INGREDIENT:
-      return {
-        ...state,
-        ingredients: {
-          ...state.ingredients,
-          [action.ingredient]: state.ingredients[action.ingredient] + 1,
-        },
-        price: state.price + PRICES[action.ingredient],
-      };
+  const newState = { ...state };
 
-    case actions.REMOVE_INGREDIENT:
-      return {
-        ...state,
-        ingredients: {
-          ...state.ingredients,
-          [action.ingredient]: state.ingredients[action.ingredient] - 1,
-        },
-        price: state.price - PRICES[action.ingredient],
-      };
+  switch (action.type) {
+    case types.ADD_INGREDIENT:
+      newState.ingredients[action.ingredient].quantity++;
+      newState.price = state.price + state.ingredients[action.ingredient].price;
+      
+      return newState;
+
+    case types.REMOVE_INGREDIENT:
+      newState.ingredients[action.ingredient].quantity--;
+      newState.price = state.price - state.ingredients[action.ingredient].price;
+      
+      return newState;
+
+    case types.SET_INGREDIENTS:
+      newState.ingredients = action.ingredients;
+      newState.price = initialState.price;
+
+      return newState;
 
     default:
-      return state;
+      return newState;
   }
 };

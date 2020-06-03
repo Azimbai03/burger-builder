@@ -2,22 +2,15 @@ import React from "react";
 import classes from "./BurgerControls.module.css";
 import BurgerControl from "./BurgerControl/BurgerControl";
 import Button from "../../UI/Button/Button"
-const CONTROLS = [
-  { label: "Cheese", type: "chees" },
-  { label: "Steak", type: "steak" },
- { label: "Tomato", type: "tamato" },
-  { label: "Lettuce", type: "lettuce" },
-  { label: "Onion", type: "onion" },
-  { label: "Kettchup", type: "kettchup" },
- 
-];
+
 
 export default ({ canOrder, ingredients, startOrder }) => {
-  const controlsOutput = CONTROLS.map((control) => (
+  const controlsOutput = Object.keys(ingredients).map((ingredient) => (
     <BurgerControl
-      key={control.type}
-      control={control}
-      disabled={ingredients[control.type] === 0}
+    key={ingredient}
+    ingredient={ingredient}
+    label={ingredients[ingredient].label}
+    disabled={ingredients[ingredient].quantity === 0}
     />
   ));
 

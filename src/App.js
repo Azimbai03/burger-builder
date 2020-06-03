@@ -11,7 +11,7 @@ export default () => {
       <Layout>
       <Switch>
           <Route path="/" exact>
-            <Redirect to="/builder" />
+            <Redirect to="/" />
           </Route>
           <Route path="/builder">
             <Burgerbuilder />
