@@ -9,7 +9,7 @@ import withAxios from "../hoc/withAxios";
 import classes from "./BurgerBuilder.module.css";
 import { useSelector,useDispatch } from "react-redux";
 import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
-import { load } from "../Store/actions/builder";
+import { load } from "../store/actions/builder";
 
 export default withAxios(() => {
   const { ingredients, price } = useSelector((state) => state);

@@ -25,7 +25,7 @@ export default () => {
       <Route path="/builder">
         <BurgerBuilder />
       </Route>
-      <Route path="/Auth">
+      <Route path="/auth">
         <Auth />
       </Route>
       <Redirect to="/" />

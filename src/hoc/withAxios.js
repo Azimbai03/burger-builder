@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Modal from "../../components/UI/Modal/Modal";
+import Modal from "../components/UI/Modal/Modal";
 
 const withErrorHandler = (WrappedComponent, axios) => {
   return (props) => {
