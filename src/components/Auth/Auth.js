@@ -41,7 +41,7 @@ export default withAxios(() => {
     errorOutput = <h4 className={classes.error}>{error.message}</h4>;
   }
 
-  const [,redirect] = location.search.split('?');
+  const [redirect] = location.search.split('?');
   let redirectOutput = null;
   if (token !== null) {
     redirectOutput = <Redirect to={"/" + redirect ? redirect : ""} />;

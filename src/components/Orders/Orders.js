@@ -10,11 +10,11 @@ import { useDispatch, useSelector } from "react-redux";
 export default withAxios(() => {
   const dispatch = useDispatch();
   const { orders } = useSelector(state => state.orders);
-  const { token, id } = useSelector(state => state.auth);
+  const { token} = useSelector(state => state.auth);
 
   useEffect(() => {
-    load(dispatch, token, id);
-  }, [dispatch, token]);
+    load(dispatch,token);
+  }, [dispatch,token]);
 
   let ordersOutput = <Loading />;
   if (orders) {

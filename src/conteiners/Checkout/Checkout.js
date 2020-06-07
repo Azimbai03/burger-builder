@@ -5,7 +5,6 @@ import CheckoutSummary from "./CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import withAxios from "../../hoc/withAxios";
-import loading from "../../components/UI/Loading/Loading";
 import { useSelector } from "react-redux";
 import Loading from "../../components/UI/Loading/Loading";
 
