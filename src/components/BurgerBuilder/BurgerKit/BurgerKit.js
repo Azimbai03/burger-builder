@@ -3,6 +3,7 @@ import Burger from "./Burger/Burger";
 import classes from "./BurgerKit.module.css";
 import Bulka from "../../Bulka/Bulka"
 import BulkaBottom from "../../Bulka/BulkaBottom";
+
 export default ({ price, ingredients }) => {
   let ingredientsOutput = [];
   Object.keys(ingredients).forEach((ingredient) => {

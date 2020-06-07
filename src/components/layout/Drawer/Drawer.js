@@ -1,6 +1,6 @@
 import React from 'react';
 import Logotup from '../../layout/Logo/Logotup';
-import Navigation from '../../layout/Toolbar/Navigation/Navigation';
+import Nav from '../../layout/Toolbar/Nav/Nav';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import classes from './Drawer.module.css';
 
@@ -13,7 +13,7 @@ export default ({ toggleDrawer, open }) => {
       <Backdrop hideCallback={toggleDrawer} show={open} />
       <div className={contentClasses.join(' ')}>
         <Logotup />
-        <Navigation />
+        <Nav />
       </div>
     </div>
   );

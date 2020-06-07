@@ -5,7 +5,6 @@ import {
   SET_INGREDIENTS
 } from "./types";
 
-
 export const add = (dispatch, ingredient) => dispatch({
   type: ADD_INGREDIENT, ingredient
 });
@@ -22,4 +21,3 @@ export const load = (dispatch) => axios
   .get("/ingredients.json")
   .then(({ data }) => set(dispatch, data))
   .catch(() => {});
- 

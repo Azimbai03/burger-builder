@@ -5,13 +5,13 @@ import BurgerKit from "../components/BurgerBuilder/BurgerKit/BurgerKit";
 import Modal from "../components/UI/Modal/Modal";
 import OrderSummary from "../components/BurgerBuilder/OrderSummary/OrderSummary";
 import Loading from "../components/UI/Loading/Loading";
-import withErrorHandler from "../hoc/withErrorHandler";
+import withAxios from "../hoc/withAxios";
 import classes from "./BurgerBuilder.module.css";
 import { useSelector,useDispatch } from "react-redux";
 import BurgerControls from "../components/BurgerBuilder/BurgerControls/BurgerControls";
 import { load } from "../Store/actions/builder";
 
-export default withErrorHandler(() => {
+export default withAxios(() => {
   const { ingredients, price } = useSelector((state) => state);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();

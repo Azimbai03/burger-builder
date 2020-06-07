@@ -1,17 +1,18 @@
 import React from "react";
-import { useHistory, Route,Redirect } from "react-router-dom";
+import { useHistory, Route, Redirect } from "react-router-dom";
 import axios from "../../axios";
-import CheckoutSummary from "../Checkout/CheckoutSummary/CheckoutSummary";
+import CheckoutSummary from "./CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
-import withErrorHandler from "../../hoc/withErrorHandler";
+import withAxios from "../../hoc/withAxios";
+import loading from "../../components/UI/Loading/Loading";
 import { useSelector } from "react-redux";
 import Loading from "../../components/UI/Loading/Loading";
 
-export default withErrorHandler(() => {
-
+export default withAxios(({ loading }) => {
   const history = useHistory();
   const { ingredients, price } = useSelector(state => state.builder);
+  const { token, id } = useSelector(state => state.auth);
 
   function checkoutCancel() {
     history.push("/builder");
@@ -23,16 +24,17 @@ export default withErrorHandler(() => {
 
   function checkoutFinish(data) {
     axios
-      .post("/orders.json", {
+      .post("/orders.json?auth=" + token, {
         ingredients,
         price,
         details: data,
+        userId: id
       })
       .then(() => history.replace("/"));
   }
 
-  let formOutput = <Loading/>;
-  if (!Loading) {
+  let formOutput = <Loading />;
+  if (!loading) {
     formOutput = <CheckoutForm checkoutFinish={checkoutFinish} />;
   }
 

@@ -1,0 +1,14 @@
+.Nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 0;
+}
+
+@media (min-width: 500px) {
+  .Nav {
+    margin: 0 12px;
+    flex-direction: row;
+  }
+}
