@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./OrderSummary.module.css";
 import Button from "../../UI/Button/Button";
-
 export default ({ ingredients, cancelOrder, finishOrder, price }) => {
   const ingredientsOutput = Object.keys(ingredients)
     .filter((ingredient) => ingredients[ingredient].quantity > 0)
